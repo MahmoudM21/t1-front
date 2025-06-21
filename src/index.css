@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+
+    --primary: 214 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 4%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 214 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 212 100% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 214 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 63%;
+
+    --accent: 214 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 212 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-t1-accentBlue/10 selection:text-t1-accentBlue dark:selection:bg-white/10 dark:selection:text-white;
+  }
+  
+  body {
+    @apply bg-white dark:bg-t1-background text-t1-textSecondary dark:text-foreground font-inter antialiased transition-colors duration-300;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-light-blue-gradient dark:bg-blue-gradient bg-clip-text text-transparent;
+  }
+  
+  .gradient-border {
+    @apply relative before:absolute before:inset-0 before:-z-10 before:p-[1px] before:bg-light-blue-gradient dark:before:bg-blue-gradient before:rounded-[inherit];
+  }
+  
+  .button-glow:hover {
+    @apply shadow-[0_0_15px_rgba(0,119,255,0.7)];
+  }
+  
+  .glass-card {
+    @apply bg-white bg-opacity-10 dark:bg-opacity-20 backdrop-blur-sm border border-black/5 dark:border-white/10;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 px-4;
+  }
+
+  .page-header {
+    @apply pt-24 pb-12 text-center;
+  }
+
+  .page-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .page-description {
+    @apply text-t1-textSecondary dark:text-t1-textSecondary max-w-2xl mx-auto mb-8;
+  }
+}
