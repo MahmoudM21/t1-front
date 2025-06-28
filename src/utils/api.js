@@ -58,25 +58,8 @@ const getBaseUrl = () => {
     }
     return response.json();
   };
-
-  export const apiPost = async (endpoint, data) => {
-    const response = await fetch(`${getBaseUrl()}${endpoint}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
   
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`HTTP ${response.status}: ${errorText}`);
-    }
   
-    return response.json();
-  };
-  
-  /*
   export const apiPost = async (endpoint, data = {}, token = null, isFormData = false) => {
     const headers = isFormData
       ? { ...(token && { Authorization: `Bearer ${token}` }) }
@@ -88,7 +71,6 @@ const getBaseUrl = () => {
     });
     return handleResponse(res);
   };
-  */
   
   export const apiGet = async (endpoint, token = null) => {
     const res = await fetch(`${getBaseUrl()}${endpoint}`, {
