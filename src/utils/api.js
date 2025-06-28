@@ -42,7 +42,7 @@ const getBaseUrl = () => {
       return process.env.NEXT_PUBLIC_API_BASE_URL;
     }
     // قيمة افتراضية إذا لم يتم العثور على المتغير
-    return 'https://d84b-41-43-176-192.ngrok-free.app';
+    return 'https://863d-41-43-176-192.ngrok-free.app';
   };
   
   const handleResponse = async (response) => {
