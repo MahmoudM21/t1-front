@@ -48,7 +48,7 @@ const App = () => (
             <Route path="/video-upload" element={<RequireAuth><VideoUploadPage /></RequireAuth>} />
             <Route path="/voice-clone" element={<RequireAuth><VoiceClonePage /></RequireAuth>} />
             <Route path="/auth/login" element={<LoginPage />} />
-            <Route path="/auth/signup" element={<SignupPage />} />
+            <Route path="/signup" element={<SignupPage />} />
             <Route path="/auth/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/legal/terms" element={<TermsPage />} />
             <Route path="/legal/privacy" element={<PrivacyPage />} />

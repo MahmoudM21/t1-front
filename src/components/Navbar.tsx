@@ -43,7 +43,7 @@ const Navbar = () => {
               <Link to="/auth/login">
                 <Button variant="ghost" className="text-t1-textSecondary dark:text-white/80 hover:text-t1-accentBlue">Login</Button>
               </Link>
-              <Link to="/auth/signup">
+              <Link to="/signup">
                 <Button className="bg-blue-gradient hover:opacity-90 button-glow transition-all">
                   Start Free Trial
                 </Button>
@@ -111,7 +111,7 @@ const Navbar = () => {
                 <Link to="/auth/login" className="p-2 text-t1-textSecondary dark:text-white/80 hover:text-t1-accentBlue" onClick={() => setIsMenuOpen(false)}>
                   Login
                 </Link>
-                <Link to="/auth/signup" className="p-2 text-t1-textSecondary dark:text-white/80 hover:text-t1-accentBlue" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/signup" className="p-2 text-t1-textSecondary dark:text-white/80 hover:text-t1-accentBlue" onClick={() => setIsMenuOpen(false)}>
                   Start Free Trial
                 </Link>
               </>
