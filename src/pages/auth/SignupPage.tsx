@@ -30,8 +30,9 @@ const SignupPage = () => {
         email,
         password
       });
-      if (data?.token) {
-        localStorage.setItem('token', data.token);
+      if (data?.access || data?.token) { // Check for both access token and token
+        const token = data.access || data.token;
+        localStorage.setItem('token', token);
         navigate('/auth/profile');
       } else {
         setErrorMessage('Signup succeeded but no token received.');
