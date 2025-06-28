@@ -26,7 +26,7 @@ function RequireAuth({ children }: { children: JSX.Element }) {
   const isAuthenticated = Boolean(localStorage.getItem('token'));
   const location = useLocation();
   if (!isAuthenticated) {
-    return <Navigate to="/auth/login" state={{ from: location }} replace />;
+    return <Navigate to="/login" state={{ from: location }} replace />;
   }
   return children;
 }
@@ -47,9 +47,9 @@ const App = () => (
             <Route path="/history" element={<RequireAuth><HistoryPage /></RequireAuth>} />
             <Route path="/video-upload" element={<RequireAuth><VideoUploadPage /></RequireAuth>} />
             <Route path="/voice-clone" element={<RequireAuth><VoiceClonePage /></RequireAuth>} />
-            <Route path="/auth/login" element={<LoginPage />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
-            <Route path="/auth/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/legal/terms" element={<TermsPage />} />
             <Route path="/legal/privacy" element={<PrivacyPage />} />
             <Route path="*" element={<NotFound />} />

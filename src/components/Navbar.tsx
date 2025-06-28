@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    navigate('/auth/login');
+    navigate('/login');
   };
 
   return (
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           {!isAuthenticated ? (
             <>
-              <Link to="/auth/login">
+              <Link to="/login">
                 <Button variant="ghost" className="text-t1-textSecondary dark:text-white/80 hover:text-t1-accentBlue">Login</Button>
               </Link>
               <Link to="/signup">
@@ -108,7 +108,7 @@ const Navbar = () => {
             )}
             {!isAuthenticated ? (
               <>
-                <Link to="/auth/login" className="p-2 text-t1-textSecondary dark:text-white/80 hover:text-t1-accentBlue" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/login" className="p-2 text-t1-textSecondary dark:text-white/80 hover:text-t1-accentBlue" onClick={() => setIsMenuOpen(false)}>
                   Login
                 </Link>
                 <Link to="/signup" className="p-2 text-t1-textSecondary dark:text-white/80 hover:text-t1-accentBlue" onClick={() => setIsMenuOpen(false)}>
