@@ -24,7 +24,7 @@ const SignupPage = () => {
     setLoading(true);
     try {
       setErrorMessage('');
-      const data = await apiPost('/auth/signup/', {
+      const data = await apiPost('/signup/', {
         first_name: firstName,
         last_name: lastName,
         username: email,
@@ -34,7 +34,7 @@ const SignupPage = () => {
       if (data?.access || data?.token) { // Check for both access token and token
         const token = data.access || data.token;
         localStorage.setItem('token', token);
-        navigate('/auth/profile');
+        navigate('/profile');
       } else {
         setErrorMessage('Signup succeeded but no token received.');
       }
