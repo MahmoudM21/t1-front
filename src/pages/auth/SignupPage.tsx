@@ -24,7 +24,7 @@ const SignupPage = () => {
     setLoading(true);
     try {
       setErrorMessage('');
-      const data = await apiPost('/auth/signup/', {
+      const data = await apiPost('/auth/signup', {
         first_name: firstName,
         last_name: lastName,
         email,
