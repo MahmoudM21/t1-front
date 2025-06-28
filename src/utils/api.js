@@ -50,7 +50,7 @@ const getBaseUrl = () => {
       if (response.status === 401 || response.status === 403) {
         localStorage.removeItem('token');
         if (typeof window !== 'undefined') {
-          window.location.href = '/auth/login?session=expired';
+          window.location.href = '/login?session=expired';
         }
       }
       const errorData = await response.json();
