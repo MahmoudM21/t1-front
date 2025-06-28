@@ -27,6 +27,7 @@ const SignupPage = () => {
       const data = await apiPost('/auth/signup/', {
         first_name: firstName,
         last_name: lastName,
+        username: email,
         email,
         password
       });
